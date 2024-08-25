@@ -1,9 +1,23 @@
+import videos from "../../json/videos.json";
 import styles from "./Category.module.css";
 
-function Category( {category, children}){
+export const categories = [
+    "Geografia",
+    "Como fazer e usar",
+    "Astronomia e Geografia",
+    "Climatologia, Meteorologia, Vegetação",
+    "Geologia e História"
+  ]
+  
+export function filterCategory(id){
+    return videos.filter( video => video.category === categories[id])
+  }
+  
+
+function Category( { category, children}){
     return (
         <section className={styles.category}>
-            <h1>Category</h1>
+            <h2>{category}</h2>
             <div>
                 { children }
             </div>
