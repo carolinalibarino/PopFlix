@@ -6,7 +6,7 @@ export const categories = [
     "Como fazer e usar",
     "Astronomia e Geografia",
     "Climatologia, Meteorologia, Vegetação",
-    "Geologia e História"
+    "Geologia e Hidrografia"
   ]
   
 export function filterCategory(id){
