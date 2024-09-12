@@ -8,41 +8,18 @@ import Header from "../../components/Header";
 
 function Home() {
 
-  //let nomeDigitado = ''
-  function pegarNome(event){
-    console.log(event.target.value)
-    //nomeDigitado = event.tagert.value
-    setNome(event.target.value)
-  }
-
-
-  //Hook = gancho
-  const [ nome, setNome ] = useState('Carol')
-
-
   return (
     <>
       <Header/>
       <Banner image="favoritos" />
       <Container>
 
-      <input
-        type="text"
-        placeholder="Nome"
-        onChange={pegarNome}
 
-      />
-
-      <h2>{nome}</h2>
-
- {/*        {
-          categories.map((category, index)=>
+        { categories.map((category, index)=>
           <Category category={category}>
             { filterCategory(index).map((video)=> <Card id={video.id} key={video.is}/>)}
-          </Category>
-          
-          )
-        } */}
+          </Category> 
+          )}
       </Container>      
       <Footer/>
     </>
