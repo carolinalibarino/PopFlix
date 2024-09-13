@@ -18,7 +18,7 @@ function SearchVideoList({ videos }){
         <section className={styles.container}>
             <input 
             type="search" 
-            placeholder="Pesquisar..."
+            placeholder="Pesquisar...."
             value={searchText}
             onChange={event => setSearchText(event.target.value)}
             />
