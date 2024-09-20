@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { createContext } from "react";
 
 export const FavoritesContext = createContext()
@@ -15,4 +15,26 @@ export default function FavoritesProvider({ children }){
 
         </FavoritesProvider>
     );
+}
+
+export function useFavoriteContext(){
+    const { favorite, setFavorite } = useContext(FavoritesContext)
+
+    function addFavorite(newFavorite){
+        const repeatedFavorite = favorite.some((item)=> item.id === newFavorite.id)
+    
+        let newList = [...favorite]
+        if (!repeatedFavorite){
+            newList.push(newFavorite)
+            return setFavorite(newList)
+        }
+
+        newList = favorite.filter((fav)=> fav.id !== newFavorite.id)
+        return setFavorite(newList)
+    }
+
+    return{
+        favorite,
+        addFavorite
+    }
 }
