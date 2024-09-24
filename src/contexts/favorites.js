@@ -9,11 +9,11 @@ export default function FavoritesProvider({ children }){
     const [ favorite, setFavorite] = useState([])
 
     return (
-        <FavoritesProvider value = {{favorite, setFavorite}}
+        <FavoritesContext.Provider value = {{favorite, setFavorite}}
         >
             {children}
 
-        </FavoritesProvider>
+        </FavoritesContext.Provider>
     );
 }
 

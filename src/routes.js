@@ -15,7 +15,7 @@ function AppRoutes() {
                     <Route path="/watch/:id" element={<Watch />}> </Route>
                     <Route path="/search" element={<Search />}> </Route>
                     <Route path="*" element={<PageNotFound />}> </Route>
-                    <Route path="favorites" element={<Favorites />} />
+                    <Route path="favorites" element={<Favorites />}> </Route>
                 </Routes>
             </FavoritesProvider>
         </BrowserRouter>
