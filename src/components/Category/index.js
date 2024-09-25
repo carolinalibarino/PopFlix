@@ -2,11 +2,11 @@ import videos from "../../json/videos.json";
 import styles from "./Category.module.css";
 
 export const categories = [
-    "Geografia",
-    "Como fazer e usar",
-    "Astronomia e Geografia",
-    "Climatologia, Meteorologia, Vegetação",
-    "Geologia e Hidrografia"
+    "Shawn Mendes",
+    "Taylor Swift",
+    "Olivia Rodrigo",
+    "Billie Eilish",
+    "Outros"
   ]
   
 export function filterCategory(id){
