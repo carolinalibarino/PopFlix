@@ -1,29 +1,26 @@
 import Header from "../../components/Header";
 import Container from "../../components/Container";
 import Footer from "../../components/Footer";
+import VideoList from "../../components/VideoList";
 import styles from "./Favorites.module.css";
-import VideoList from "../../components/Footer";
 import { useFavoriteContext } from "../../contexts/favorites";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
 
-
-
-
-function Favorites(){
+function Favorites() {
 
     const { favorite } = useFavoriteContext()
 
-    return(
+    return (
         <>
-            <ScrollToTopButton/>
-            <Header/>
+            <ScrollToTopButton />
+            <Header />
             <Container>
                 <section className={styles.favorites}>
                     <h2>Meus Favoritos</h2>
-                    { <VideoList videos={favorite} emptyHearding="Sem favoritos" />}
+                    { <VideoList videos={favorite} emptyHeading="Sem favoritos :( " /> }
                 </section>
             </Container>
-            <Footer/>
+            <Footer />
         </>
     );
 }

@@ -1,7 +1,7 @@
 .container{
     align-content: center;
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     background-color: #191919;
     color: #fff;
     padding-bottom: 1.5rem;
@@ -9,4 +9,10 @@
     padding-inline: 1.5rem;
     overflow: hidden;
     padding-left: 75px
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding-inline: 2.5rem;
+    }
 }
