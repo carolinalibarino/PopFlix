@@ -5,7 +5,7 @@ export const categories = [
     "Shawn Mendes",
     "Taylor Swift",
     "Olivia Rodrigo",
-    "Billie Eilish",
+    "Harry Styles",
     "Outros"
   ]
   

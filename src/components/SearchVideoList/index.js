@@ -4,14 +4,23 @@ import { useEffect, useState } from "react";
 import Loader from "../Loader";
 
 //filtrando por categoria ou título 
-function filterVideos(videos , searchText){
-    return videos.filter((video)=> videos.category.includes(searchText) || video.title.includes(searchText))
-
-}
+function filterVideos(videos, searchTerm) {
+    if (!videos || !Array.isArray(videos)) {
+      return []; // ou outra lógica caso "videos" não seja válido
+    }
+  
+    return videos.filter((video) => {
+      if (typeof video.title === 'string') {
+        return video.title.includes(searchTerm);
+      }
+      return false;
+    });
+  }
+  
 
 function SearchVideoList({ videos }){
 
-    const [ searchText, setSearchText ] = useState('Geografia')
+    const [ searchText, setSearchText ] = useState('')
     const foundVideos = filterVideos(videos, searchText)
 
     const [ loading, setLoading] = useState(true)
